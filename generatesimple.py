@@ -125,34 +125,44 @@ def gen_sample(face_size, stop_value):
                 '''
 
                 ious = iou(crop_box, np.array(boxes))[0]
-                if ious > 0.65:  # 可以自己修改
+                negative_limit=0
+                postive_limit=0
+                if(face_size==12):
+                    postive_limit=0.7
+                    negative_limit=0.3
+                elif(face_size==24) or(face_size==48):
+                    postive_limit=0.6
+                    negative_limit=0.4
+                else:
+                    raise ValueError("Face Size Must be 12 or 24 or 48,Please chek the face size")
+                if ious >=postive_limit:  # 可以自己修改
                     positive_anno_file.write(
-                        "{0}.png {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15}\n".format(
+                        "{0}.jpg {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15}\n".format(
                             os.path.join(positive_image_dir, str(positive_count)), 1, offset_x1, offset_y1,
                             offset_x2, offset_y2,
                             offset_px1, offset_py1, offset_px2, offset_py2, offset_px3, offset_py3,
                             offset_px4, offset_py4, offset_px5, offset_py5))
                     positive_anno_file.flush()  # flush() 方法是用来刷新缓冲区的，即将缓冲区中的数据立刻写入文件，同时清空缓冲区
-                    face_resize.save(os.path.join(positive_image_dir, "{0}.png".format(positive_count)))
+                    face_resize.save(os.path.join(positive_image_dir, "{0}.jpg".format(positive_count)))
                     # print("positive_count",positive_count)
                     positive_count += 1
-                elif 0.65 > ious > 0.4:
+                elif postive_limit > ious > negative_limit:
                     part_anno_file.write(
-                        "{0}.png {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15}\n".format(
+                        "{0}.jpg {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15}\n".format(
                             os.path.join(part_image_dir, str(part_count)), 2, offset_x1, offset_y1,
                             offset_x2, offset_y2,
                             offset_px1, offset_py1, offset_px2, offset_py2, offset_px3, offset_py3,
                             offset_px4, offset_py4, offset_px5, offset_py5))
                     part_anno_file.flush()
-                    face_resize.save(os.path.join(part_image_dir, "{0}.png".format(part_count)))
+                    face_resize.save(os.path.join(part_image_dir, "{0}.jpg".format(part_count)))
                     # print("part_count", part_count)
                     part_count += 1
-                elif ious < 0.1:
+                elif ious <=negative_limit:
                     negative_anno_file.write(
-                        "{0}.png {1} 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n".format(
+                        "{0}.jpg {1} 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n".format(
                             os.path.join(negative_image_dir, str(negative_count)), 0))
                     negative_anno_file.flush()
-                    face_resize.save(os.path.join(negative_image_dir, "{0}.png".format(negative_count)))
+                    face_resize.save(os.path.join(negative_image_dir, "{0}.jpg".format(negative_count)))
                     # print("negative_count", negative_count)
                     negative_count += 1
                 count = positive_count + part_count + negative_count
@@ -166,6 +176,7 @@ def gen_sample(face_size, stop_value):
 
 
 if __name__ == '__main__':
-    gen_sample(12, 10000)
-    gen_sample(24, 10000)
-    gen_sample(48, 10000)
+    image_num=40000
+    gen_sample(12, image_num)
+    gen_sample(24, image_num)
+    gen_sample(48, image_num)

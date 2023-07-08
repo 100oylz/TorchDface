@@ -65,6 +65,10 @@ class Trainer:
         #     net.load_state_dict(torch.load(self.save_path, map_location=self.device))
 
     def trainer(self):
+        if(self.device=="cuda"):
+            print("Use Gpu")
+        else:
+            print("Use Cpu")
         loss, cls_loss, bbox_offset_loss, landmark_offset_loss = 0, 0, 0, 0
         self.net.train()
         # self.net.eval()
