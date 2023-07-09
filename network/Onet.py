@@ -32,14 +32,18 @@ class Onet(nn.Module):
 		
 		self.conv1=nn.Linear(3*3*128,256)
 		self.rrelu=nn.RReLU()
-		self.conv1_1_2=nn.Linear(256,2)
-		self.conv1_1_4 = nn.Conv2d(32, 4, kernel_size=1, stride=1)
-		self.conv1_1_10 = nn.Conv2d(32, 10, kernel_size=1, stride=1)
+		self.conv1_1_2=nn.Linear(256,1)
+		self.conv1_1_4 = nn.Linear(256, 4)
+		self.conv1_1_10 = nn.Linear(256, 10)
 		
 		self.apply(weights_init.weights_init)
 		
 	def forward(self,x):
 		x=self.pre_layer(x)
+		x = x.view(x.size(0), -1)
+		x=self.conv1(x)
+		
+		self.rrelu(x)
 		
 		label=torch.sigmoid(self.conv1_1_2(x))
 		

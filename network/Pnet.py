@@ -25,7 +25,7 @@ class Pnet(nn.Module):
 			nn.RReLU()
 		)
 		
-		self.conv1_1_2 = nn.Conv2d(32, 2, kernel_size=1, stride=1)
+		self.conv1_1_2 = nn.Conv2d(32, 1, kernel_size=1, stride=1)
 		self.conv1_1_4 = nn.Conv2d(32, 4, kernel_size=1, stride=1)
 		self.conv1_1_10 = nn.Conv2d(32, 10, kernel_size=1, stride=1)
 		

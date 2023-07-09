@@ -2,8 +2,8 @@ import train
 import os
 from network import Pnet
 
-batchsize = 16
-max_epoch = 100
+batchsize = 64
+max_epoch = 10
 # max_epoch=10
 data_path_relative = "./data/MTCNN/12"
 
