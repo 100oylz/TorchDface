@@ -11,7 +11,6 @@ save_path = "data/MTCNN"  # 生成样本的总的保存路径
 
 float_num = [0.1, 0.5, 0.5, 0.5, 0.9, 0.9, 0.9, 0.9, 0.9]  # 控制正负样本比例，（控制比例？）
 
-
 def gen_sample(face_size, stop_value):
     print("gen size:{} image".format(face_size))
     positive_image_dir = os.path.join(save_path, str(face_size), "positive")  # 仅仅生成路径名
@@ -79,9 +78,11 @@ def gen_sample(face_size, stop_value):
             _cx,_cy是它中心点坐标
             其他容易理解
             '''
-
+            
             for _ in range(4):
-                _side_len = side_len + np.random.randint(int(-side_len * seed), int(side_len * seed))  # 生成框
+                if side_len * seed <= 0:
+                    seed = 0.1
+                _side_len = side_len + np.random.randint(int(-np.abs(side_len * seed)), int(np.abs(side_len * seed)))  # 生成框
                 _cx = cx + np.random.randint(int(-cx * seed), int(cx * seed))  # 中心点作偏移
                 _cy = cy + np.random.randint(int(-cy * seed), int(cy * seed))
                 _x1 = _cx - _side_len / 2  # 左上角
@@ -176,7 +177,7 @@ def gen_sample(face_size, stop_value):
 
 
 if __name__ == '__main__':
-    image_num=40000
+    image_num=200000
     gen_sample(12, image_num)
     gen_sample(24, image_num)
     gen_sample(48, image_num)

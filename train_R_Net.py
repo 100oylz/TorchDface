@@ -3,7 +3,7 @@ import os
 from network import Rnet
 
 batchsize = 32
-max_epoch = 10
+max_epoch = 200
 # max_epoch=10
 data_path_relative = "./data/MTCNN/24"
 

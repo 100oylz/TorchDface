@@ -6,7 +6,7 @@ import os
 import cv2
 from torchvision import transforms
 import utils
-from network import PRO_Net
+from network import Pnet,Rnet,Onet
 
 p_net_cls = 0.2
 r_net_cls = 0.6
@@ -16,17 +16,17 @@ class Detector:
     def __init__(self):
         # self.device = "cuda" if torch.cuda.is_available() else torch.device("cpu")
         self.device = "cpu"
-        self.pnet = PRO_Net.PNet()
-        self.rnet = PRO_Net.RNet()
-        self.onet = PRO_Net.ONet()
+        self.pnet = Pnet.Pnet()
+        self.rnet = Rnet.Rnet()
+        self.onet = Onet.Onet()
 
         self.pnet.to(self.device)
         self.rnet.to(self.device)
         self.onet.to(self.device)
 
-        self.pnet.load_state_dict(torch.load("checkpoints/p_net_100.pt", map_location=self.device))
-        self.rnet.load_state_dict(torch.load("checkpoints/r_net_100.pt", map_location=self.device))
-        self.onet.load_state_dict(torch.load("checkpoints/o_net_100.pt", map_location=self.device))
+        self.pnet.load_state_dict(torch.load("checkpoints/p_net_best.pt", map_location=self.device))
+        self.rnet.load_state_dict(torch.load("checkpoints/r_net_best.pt", map_location=self.device))
+        self.onet.load_state_dict(torch.load("checkpoints/o_net_best.pt", map_location=self.device))
 
         self.pnet.eval()
         self.rnet.eval()
@@ -246,7 +246,7 @@ def test_pic():
             cv2.circle(img, (x33, y33), radius=2, color=(255, 0, 0), thickness=2, lineType=cv2.LINE_AA)
             cv2.circle(img, (x44, y44), radius=2, color=(255, 0, 0), thickness=2, lineType=cv2.LINE_AA)
             cv2.circle(img, (x55, y55), radius=2, color=(255, 0, 0), thickness=2, lineType=cv2.LINE_AA)
-
+        img = cv2.resize(img, (800, 600))
         cv2.imshow('pic', img)
         cv2.waitKey(0)
 
@@ -298,6 +298,7 @@ def test_video():
             # im = np.array(im).astype('uint8')
             # im = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR)
         # im = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2BGR)
+        img=cv2.resize(img,(800,600))
         cv2.imshow("video", img)
         cv2.waitKey(1)
 

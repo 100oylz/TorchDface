@@ -1,0 +1,95 @@
+F:\anaconda\python.exe F:/pycharmpython/TorchDface/train_R_Net.py
+Use Gpu
+load state success
+epoch:0 loss:0.1216 cls_loss:0.1152 bbox_offset_loss:0.0065
+save 0
+epoch:1 loss:0.1255 cls_loss:0.1175 bbox_offset_loss:0.0080
+epoch:2 loss:0.0296 cls_loss:0.0233 bbox_offset_loss:0.0062
+save 2
+epoch:3 loss:0.0116 cls_loss:0.0058 bbox_offset_loss:0.0058
+save 3
+epoch:4 loss:0.0058 cls_loss:0.0016 bbox_offset_loss:0.0042
+save 4
+epoch:5 loss:0.0270 cls_loss:0.0228 bbox_offset_loss:0.0042
+epoch:6 loss:0.0036 cls_loss:0.0001 bbox_offset_loss:0.0034
+save 6
+epoch:7 loss:0.1376 cls_loss:0.1330 bbox_offset_loss:0.0046
+epoch:8 loss:0.0283 cls_loss:0.0204 bbox_offset_loss:0.0079
+epoch:9 loss:0.0151 cls_loss:0.0022 bbox_offset_loss:0.0129
+epoch:10 loss:0.0121 cls_loss:0.0055 bbox_offset_loss:0.0066
+epoch:11 loss:0.0083 cls_loss:0.0016 bbox_offset_loss:0.0067
+epoch:12 loss:0.0083 cls_loss:0.0002 bbox_offset_loss:0.0080
+epoch:13 loss:0.0061 cls_loss:0.0000 bbox_offset_loss:0.0061
+epoch:14 loss:0.0095 cls_loss:0.0040 bbox_offset_loss:0.0055
+epoch:15 loss:0.0108 cls_loss:0.0051 bbox_offset_loss:0.0056
+epoch:16 loss:0.0110 cls_loss:0.0008 bbox_offset_loss:0.0102
+epoch:17 loss:0.0491 cls_loss:0.0370 bbox_offset_loss:0.0121
+epoch:18 loss:0.0067 cls_loss:0.0001 bbox_offset_loss:0.0066
+epoch:19 loss:0.1607 cls_loss:0.1511 bbox_offset_loss:0.0095
+epoch:20 loss:0.0088 cls_loss:0.0001 bbox_offset_loss:0.0087
+epoch:21 loss:0.0044 cls_loss:0.0008 bbox_offset_loss:0.0035
+epoch:22 loss:0.0096 cls_loss:0.0058 bbox_offset_loss:0.0038
+epoch:23 loss:0.0092 cls_loss:0.0041 bbox_offset_loss:0.0051
+epoch:24 loss:0.0111 cls_loss:0.0005 bbox_offset_loss:0.0106
+epoch:25 loss:0.0139 cls_loss:0.0058 bbox_offset_loss:0.0081
+epoch:26 loss:0.0035 cls_loss:0.0003 bbox_offset_loss:0.0031
+save 26
+epoch:27 loss:0.0195 cls_loss:0.0102 bbox_offset_loss:0.0093
+epoch:28 loss:0.0049 cls_loss:0.0001 bbox_offset_loss:0.0048
+epoch:29 loss:0.0059 cls_loss:0.0008 bbox_offset_loss:0.0052
+epoch:30 loss:0.0113 cls_loss:0.0023 bbox_offset_loss:0.0090
+epoch:31 loss:0.0069 cls_loss:0.0000 bbox_offset_loss:0.0069
+epoch:32 loss:0.0072 cls_loss:0.0003 bbox_offset_loss:0.0069
+epoch:33 loss:0.0076 cls_loss:0.0007 bbox_offset_loss:0.0069
+epoch:34 loss:0.0093 cls_loss:0.0001 bbox_offset_loss:0.0093
+epoch:35 loss:0.0050 cls_loss:0.0003 bbox_offset_loss:0.0048
+epoch:36 loss:0.0103 cls_loss:0.0001 bbox_offset_loss:0.0102
+epoch:37 loss:0.0060 cls_loss:0.0000 bbox_offset_loss:0.0060
+epoch:38 loss:0.0046 cls_loss:0.0000 bbox_offset_loss:0.0046
+epoch:39 loss:0.0062 cls_loss:0.0001 bbox_offset_loss:0.0061
+epoch:40 loss:0.0313 cls_loss:0.0125 bbox_offset_loss:0.0187
+epoch:41 loss:0.0145 cls_loss:0.0076 bbox_offset_loss:0.0069
+epoch:42 loss:0.0176 cls_loss:0.0064 bbox_offset_loss:0.0112
+epoch:43 loss:0.0096 cls_loss:0.0018 bbox_offset_loss:0.0078
+epoch:44 loss:0.0023 cls_loss:0.0000 bbox_offset_loss:0.0023
+save 44
+epoch:45 loss:0.0078 cls_loss:0.0000 bbox_offset_loss:0.0077
+epoch:46 loss:0.3215 cls_loss:0.3157 bbox_offset_loss:0.0058
+epoch:47 loss:0.0087 cls_loss:0.0000 bbox_offset_loss:0.0086
+epoch:48 loss:0.0043 cls_loss:0.0000 bbox_offset_loss:0.0043
+epoch:49 loss:0.0141 cls_loss:0.0001 bbox_offset_loss:0.0140
+epoch:50 loss:0.0064 cls_loss:0.0020 bbox_offset_loss:0.0045
+epoch:51 loss:0.0054 cls_loss:0.0002 bbox_offset_loss:0.0053
+epoch:52 loss:0.0032 cls_loss:0.0002 bbox_offset_loss:0.0030
+epoch:53 loss:0.0230 cls_loss:0.0094 bbox_offset_loss:0.0136
+epoch:54 loss:0.0152 cls_loss:0.0001 bbox_offset_loss:0.0151
+epoch:55 loss:0.0091 cls_loss:0.0021 bbox_offset_loss:0.0070
+epoch:56 loss:0.3117 cls_loss:0.3029 bbox_offset_loss:0.0087
+epoch:57 loss:0.0079 cls_loss:0.0003 bbox_offset_loss:0.0076
+epoch:58 loss:0.0446 cls_loss:0.0413 bbox_offset_loss:0.0034
+epoch:59 loss:0.0428 cls_loss:0.0375 bbox_offset_loss:0.0053
+epoch:60 loss:0.0085 cls_loss:0.0013 bbox_offset_loss:0.0072
+epoch:61 loss:0.0106 cls_loss:0.0017 bbox_offset_loss:0.0089
+epoch:62 loss:0.0109 cls_loss:0.0001 bbox_offset_loss:0.0108
+epoch:63 loss:0.0092 cls_loss:0.0026 bbox_offset_loss:0.0066
+epoch:64 loss:0.0075 cls_loss:0.0000 bbox_offset_loss:0.0075
+epoch:65 loss:0.0089 cls_loss:0.0023 bbox_offset_loss:0.0066
+epoch:66 loss:0.0166 cls_loss:0.0102 bbox_offset_loss:0.0064
+epoch:67 loss:0.0132 cls_loss:0.0000 bbox_offset_loss:0.0132
+epoch:68 loss:0.0069 cls_loss:0.0003 bbox_offset_loss:0.0066
+epoch:69 loss:0.0111 cls_loss:0.0011 bbox_offset_loss:0.0099
+epoch:70 loss:0.0104 cls_loss:0.0005 bbox_offset_loss:0.0098
+epoch:71 loss:0.0065 cls_loss:0.0000 bbox_offset_loss:0.0064
+epoch:72 loss:0.0066 cls_loss:0.0001 bbox_offset_loss:0.0065
+epoch:73 loss:0.0080 cls_loss:0.0002 bbox_offset_loss:0.0078
+epoch:74 loss:0.0052 cls_loss:0.0003 bbox_offset_loss:0.0049
+epoch:75 loss:0.0062 cls_loss:0.0008 bbox_offset_loss:0.0053
+epoch:76 loss:0.0981 cls_loss:0.0760 bbox_offset_loss:0.0221
+epoch:77 loss:0.0080 cls_loss:0.0000 bbox_offset_loss:0.0080
+epoch:78 loss:0.0171 cls_loss:0.0001 bbox_offset_loss:0.0170
+epoch:79 loss:0.0200 cls_loss:0.0108 bbox_offset_loss:0.0092
+epoch:80 loss:0.0100 cls_loss:0.0000 bbox_offset_loss:0.0099
+epoch:81 loss:0.0361 cls_loss:0.0329 bbox_offset_loss:0.0032
+epoch:82 loss:0.0160 cls_loss:0.0059 bbox_offset_loss:0.0101
+
+进程已结束，退出代码 -1
